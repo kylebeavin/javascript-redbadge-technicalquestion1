@@ -24,7 +24,7 @@ class AccountUserService {
     }
 
     checkUser() {
-        if (!this._userId)
+        if (this._userId)
             return new Promise((resolve, reject) => {
                 return resolve(false)
             })
