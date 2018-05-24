@@ -13,7 +13,6 @@ router.get('/users', (req, res) => {
         }
     )
 })
-
 router.get('/:id/users', (req, res) => {
     const limit = req.query
     aus(req.params.id).findAllUsers(limit)
