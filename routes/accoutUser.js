@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const AccountUserService = require('../services/accountUserService');
 
-console.log('hi')
 router.get('/users', (req, res) => {
     const limit = req.query
     aus(req.params.id).findAllUsers(limit)

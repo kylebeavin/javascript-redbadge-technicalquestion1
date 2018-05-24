@@ -4,9 +4,9 @@ const Products = db.model('store_inventory');
 
 router.get('/', (req,res) => {
     const limit = req.query
-    Products.findAll().then(
-        findAllSuccess = (data) => {
-            res.json(data)
+    Products.findAll(limit).then(
+        findAllSuccess = (products) => {
+            res.json(products)
         },
         findAllError = (err) => {
             res.send(500, err.message)
